@@ -13,7 +13,6 @@ urls = (
     '/wx/callback', 'callback')
 
 
-app = web.application(urls, globals())
 
 
 class callback:
@@ -26,5 +25,6 @@ class callback:
 
 
 if __name__ == '__main__':
-    app.run()
+    app = web.application(urls, globals())
+    app.wsgifunc()
 
